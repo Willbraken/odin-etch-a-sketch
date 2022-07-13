@@ -1,30 +1,34 @@
+
 .containerall {
     width: 720px;
     height: 720px;
-    margin: auto;
     border-width: thin;
     border-style: solid;
-    border-color: crimson;
+    border-color: grey;
     display: flex;
     justify-content: space-evenly;
+    margin: auto;
 }
 
 .colordiv {
-    height: auto;
-    width: auto;
+    box-sizing: border-box;
+    margin: 0px;
     border-width: thin;
     border-style: solid;
-    border-color: crimson;
+    border-color: grey;
     height: 45px;
     width: 45px;
 }
 
 .horizontalrow {
+    margin: auto;
+    box-sizing: border-box;
     display: flex;
     justify-content: space-evenly;
-    border-width: thin;
-    border-style: solid;
-    border-color: crimson;
     height: 45px;
     width: 720px;
+}
+
+.blackbg {
+    background-color: black;
 }

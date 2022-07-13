@@ -16,6 +16,23 @@ function addItems(size) {
             colorDiv.classList.add('colordiv');
             horizontalRow.appendChild(colorDiv);
         }
-        
     }
 }
+
+const pixels = document.querySelectorAll('.colordiv');
+const bgChange = "blackbg";
+
+function changeColor(pxl, bgChange) {
+    [].forEach.call(pixels, function(pixel) {
+        if (pixel.className === bgChange) {
+            pixel.classList.remove(bgChange);
+        }
+    });
+    pxl.classList.add(bgChange);
+}
+
+[].forEach.call(pixels, function(pixel) {
+    pixel.addEventListener("click", function() {
+        changeColor(this, bgChange);
+    });
+});
