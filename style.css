@@ -1,34 +1,37 @@
 
-.containerall {
-    width: 720px;
-    height: 720px;
+#containerall {
     border-width: thin;
     border-style: solid;
     border-color: grey;
     display: flex;
-    justify-content: space-evenly;
-    margin: auto;
+    flex-direction: column;
+    width: 720px;
+    height: 720px;
 }
 
 .colordiv {
+    margin: auto;
     box-sizing: border-box;
-    margin: 0px;
     border-width: thin;
     border-style: solid;
     border-color: grey;
-    height: 45px;
-    width: 45px;
+    flex-grow: 1;
+    height: 100%;
 }
 
 .horizontalrow {
     margin: auto;
     box-sizing: border-box;
     display: flex;
-    justify-content: space-evenly;
-    height: 45px;
+    flex-grow: 1;
     width: 720px;
 }
 
 .blackbg {
     background-color: black;
+}
+
+#backbtn {
+    margin: auto;
+    text-align: center;
 }

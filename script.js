@@ -2,9 +2,12 @@
 //make flexbox containing horizontal flexbox rows
 
 const containerAll = document.getElementById('containerall');
- 
+const sizeBtn = document.getElementById('sizebtn');
+let gridSize = 16;
+sizeBtn.addEventListener("click", function(){gridSize = prompt("Enter Desired Grid Size:"); addItems(gridSize)});
 
-addItems(16);
+
+addItems(gridSize);
 
 function addItems(size) {
     for (i=1; i<=size; i++) {
