@@ -5,7 +5,6 @@ const containerAll = document.getElementById('containerall');
 const sizeBtn = document.getElementById('sizebtn');
 let pixels = document.querySelectorAll('.colordiv');
 let gridSize = 16;
-sessionStorage.setItem("sizeGrid", gridSize); 
 
 
 sizeBtn.addEventListener("click", function(){
