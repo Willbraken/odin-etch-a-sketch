@@ -9,6 +9,10 @@ let gridSize = 16;
 
 sizeBtn.addEventListener("click", function(){
     gridSize = prompt("Enter Desired Grid Size:");
+    if (gridSize > 100) {
+        alert("Please enter a number smaller than 100.");
+        return;
+    }
     sessionStorage.setItem("sizeGrid", gridSize); 
     location.reload();
     });
