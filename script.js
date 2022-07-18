@@ -3,13 +3,28 @@
 
 const containerAll = document.getElementById('containerall');
 const sizeBtn = document.getElementById('sizebtn');
+let pixels = document.querySelectorAll('.colordiv');
 let gridSize = 16;
-sizeBtn.addEventListener("click", function(){gridSize = prompt("Enter Desired Grid Size:"); addItems(gridSize)});
 
 
-addItems(gridSize);
+sizeBtn.addEventListener("click", function(){
+    gridSize = prompt("Enter Desired Grid Size:");
+    sessionStorage.setItem("sizeGrid", gridSize); 
+    location.reload();
+    });
+
+
+addItems(sessionStorage.getItem("sizeGrid"));
 
 function addItems(size) {
+    while (containerAll.firstChild) {
+        containerAll.removeChild(containerAll.firstChild);
+    }
+
+    while (containerAll.firstChild) {
+        containerAll.removeChild(containerAll.firstChild);
+    }
+
     for (i=1; i<=size; i++) {
         const horizontalRow = document.createElement('div');
         horizontalRow.classList.add('horizontalrow');
@@ -18,11 +33,12 @@ function addItems(size) {
             const colorDiv = document.createElement('div');
             colorDiv.classList.add('colordiv');
             horizontalRow.appendChild(colorDiv);
+            pixels = document.querySelectorAll('.colordiv');
         }
     }
 }
 
-const pixels = document.querySelectorAll('.colordiv');
+
 const bgChange = "blackbg";
 
 function changeColor(pxl, bgChange) {
